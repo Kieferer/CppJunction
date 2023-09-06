@@ -5,7 +5,7 @@ TreeSet::TreeSet() {
 }
 
 TreeSet::~TreeSet() {
-
+    delete root;
 }
 
 void TreeSet::insert(int value) {
