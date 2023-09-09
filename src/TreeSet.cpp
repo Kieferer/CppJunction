@@ -25,6 +25,14 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
         return new TreeNode(value);
     }
 
+    if (value < node->getKey()){
+        node->setLeft(addRecursive(node->getLeft(), value));
+    } else if (value > node->getKey()) {
+        node->setRight(addRecursive(node->getRight(), value));
+    } else {
+        return node;
+    }
+
     return nullptr;
 }
 
