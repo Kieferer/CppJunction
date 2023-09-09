@@ -60,8 +60,18 @@ TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
     return nullptr;
 }
 
-TreeNode* TreeSet::containsRecursive(TreeNode* node, int value) {
-    return nullptr;
+bool TreeSet::containsRecursive(TreeNode* node, int value) {
+    if (node == nullptr){
+        return false;
+    }
+
+    if (value == node->getKey()) {
+        return true;
+    } else if (value < node->getKey()) {
+        return containsRecursive(node->getLeft(), value);
+    } else {
+        return containsRecursive(node->getRight(), value);
+    }
 }
 
 int TreeSet::sizeRecursive(TreeNode* node) {
