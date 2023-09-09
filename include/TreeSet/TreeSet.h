@@ -14,13 +14,13 @@ public:
 private:
     TreeNode* root;
 
-    TreeNode* addRecursive(TreeNode node, int value);
-    TreeNode* removeRecursive(TreeNode node, int value);
-    TreeNode* containsRecursive(TreeNode node, int value);
-    TreeNode* sizeRecursive(TreeNode node);
+    TreeNode* addRecursive(TreeNode* node, int value);
+    TreeNode* removeRecursive(TreeNode* node, int value);
+    TreeNode* containsRecursive(TreeNode* node, int value);
+    TreeNode* sizeRecursive(TreeNode* node);
 
-    TreeNode* rightRotate(TreeNode y);
-    TreeNode* leftRotate(TreeNode x);
+    TreeNode* rightRotate(TreeNode* y);
+    TreeNode* leftRotate(TreeNode* x);
 
     void destroyTree(TreeNode* node);
 };
