@@ -9,10 +9,10 @@ public:
 
 private:
     struct TreeNode {
-        int data;
+        int key;
+        int height;
         TreeNode *left;
         TreeNode *right;
-        int height;
     };
     TreeNode *root;
 };
