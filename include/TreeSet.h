@@ -3,7 +3,7 @@ public:
     TreeSet();
     ~TreeSet();
 
-    void insert(int value);
+    void add(int value);
     void remove(int value);
     bool contains(int value);
 
