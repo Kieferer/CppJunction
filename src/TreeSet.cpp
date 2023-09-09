@@ -68,6 +68,9 @@ int TreeSet::sizeRecursive(TreeNode* node) {
     if (node == nullptr) {
         return 0;
     }
+
+    int sizeLeft = sizeRecursive(node->getLeft());
+    int sizeRight = sizeRecursive(node->getRight());
     return 0;
 }
 
