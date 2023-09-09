@@ -18,4 +18,7 @@ private:
     TreeNode* removeRecursive(TreeNode node, int value);
     TreeNode* containsRecursive(TreeNode node, int value);
     TreeNode* sizeRecursive(TreeNode node);
+
+    TreeNode* rightRotate(TreeNode y);
+    TreeNode* leftRotate(TreeNode x);
 };
