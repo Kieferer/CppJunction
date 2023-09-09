@@ -65,6 +65,9 @@ TreeNode* TreeSet::containsRecursive(TreeNode* node, int value) {
 }
 
 int TreeSet::sizeRecursive(TreeNode* node) {
+    if (node == nullptr) {
+        return 0;
+    }
     return 0;
 }
 
