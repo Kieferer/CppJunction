@@ -1,8 +1,13 @@
-//
-// Created by balaz on 2023. 09. 09..
-//
+class TreeNode {
+private:
+    int key;
+    int height;
+    TreeNode *left;
+    TreeNode *right;
 
-#ifndef CPPJUNCTION_TREENODE_H
-#define CPPJUNCTION_TREENODE_H
-
-#endif //CPPJUNCTION_TREENODE_H
+public:
+    int getKey();
+    int getHeight();
+    TreeNode getLeft();
+    TreeNode getRight();
+};
