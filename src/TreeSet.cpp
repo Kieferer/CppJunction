@@ -21,7 +21,39 @@ int TreeSet::size() {
 }
 
 TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
-    return nullptr;
+    if (node == nullptr){
+        return new TreeNode(value);
+    }
+
+    if (value < node->getKey()){
+        node->setLeft(addRecursive(node->getLeft(), value));
+    } else if (value > node->getKey()) {
+        node->setRight(addRecursive(node->getRight(), value));
+    } else {
+        return node;
+    }
+
+    node->recalculateHeight();
+    int balance = node->getBalance();
+
+    if (balance > 1) {
+        if (value < node->getLeft()->getKey()){
+            return rightRotate(node);
+        }
+        if (value > node->getLeft()->getKey()){
+            return leftRotate(node->getLeft());
+        }
+    } else if (balance < -1) {
+        if (value > node->getRight()->getKey()) {
+            return leftRotate(node);
+        }
+        if (value < node->getRight()->getKey()) {
+            node->setRight(rightRotate(node->getRight()));
+            return leftRotate(node);
+        }
+    }
+
+    return node;
 }
 
 TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
