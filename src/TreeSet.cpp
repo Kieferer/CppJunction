@@ -1,9 +1,5 @@
 #include "TreeSet/TreeSet.h"
 
-TreeSet::TreeSet() {
-
-}
-
 TreeSet::~TreeSet() {
     delete root;
 }
