@@ -1,4 +1,5 @@
 #include "Collection.h"
+#include "TreeNode.h"
 
 class TreeSet : public Collection {
 public:
@@ -11,11 +12,5 @@ public:
     int size() override;
 
 private:
-    struct TreeNode {
-        int key;
-        int height;
-        TreeNode *left;
-        TreeNode *right;
-    };
-    TreeNode *root;
+    TreeNode* root;
 };
