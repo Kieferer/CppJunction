@@ -21,4 +21,6 @@ private:
 
     TreeNode* rightRotate(TreeNode y);
     TreeNode* leftRotate(TreeNode x);
+
+    void destroyTree(TreeNode* node);
 };
