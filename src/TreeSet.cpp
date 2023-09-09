@@ -23,3 +23,20 @@ bool TreeSet::contains(int value) {
 int TreeSet::size() {
     return 0;
 }
+
+TreeNode *TreeSet::addRecursive(TreeNode node, int value) {
+    return nullptr;
+}
+
+TreeNode *TreeSet::removeRecursive(TreeNode node, int value) {
+    return nullptr;
+}
+
+TreeNode *TreeSet::containsRecursive(TreeNode node, int value) {
+    return nullptr;
+}
+
+TreeNode *TreeSet::sizeRecursive(TreeNode node) {
+    return nullptr;
+}
+
