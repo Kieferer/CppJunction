@@ -1,7 +1,7 @@
 #include "TreeSet/TreeSet.h"
 
 TreeSet::~TreeSet() {
-    delete root;
+    destroyTree(root);
 }
 
 void TreeSet::add(int value) {
@@ -45,6 +45,10 @@ TreeNode *TreeSet::leftRotate(TreeNode* x) {
 }
 
 void TreeSet::destroyTree(TreeNode* node) {
-
+    if (node){
+        destroyTree(node->getLeft());
+        destroyTree(node->getRight());
+        delete node;
+    }
 }
 
