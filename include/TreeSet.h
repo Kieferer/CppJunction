@@ -1,11 +1,14 @@
-class TreeSet {
+#include "Collection.h"
+
+class TreeSet : public Collection {
 public:
     TreeSet();
     ~TreeSet();
 
-    void add(int value);
-    void remove(int value);
-    bool contains(int value);
+    void add(int value) override;
+    void remove(int value) override;
+    bool contains(int value) override;
+    int size() override;
 
 private:
     struct TreeNode {
