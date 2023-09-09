@@ -32,7 +32,7 @@ TreeNode* TreeSet::containsRecursive(TreeNode* node, int value) {
     return nullptr;
 }
 
-TreeNode* TreeSet::sizeRecursive(TreeNode* node) {
+int TreeSet::sizeRecursive(TreeNode* node) {
     return nullptr;
 }
 
