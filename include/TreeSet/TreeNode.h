@@ -1,3 +1,5 @@
+#include <algorithm>
+
 class TreeNode {
 private:
     int key;
@@ -14,4 +16,10 @@ public:
     void setHeight(int height) { this->height = height; }
     void setLeft(TreeNode* left) { this->left = left; }
     void setRight(TreeNode* right) { this->right = right; }
+
+    void recalculateHeight() {
+        int leftHeight = (left) ? left->getHeight() : 0;
+        int rightHeight = (right) ? right->getHeight() : 0;
+        height = std::max(leftHeight, rightHeight) + 1;
+    }
 };
