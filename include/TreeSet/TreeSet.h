@@ -3,7 +3,6 @@
 
 class TreeSet : public Collection {
 public:
-    TreeSet();
     ~TreeSet();
 
     void add(int value) override;
