@@ -13,4 +13,9 @@ public:
 
 private:
     TreeNode* root;
+
+    TreeNode* addRecursive(TreeNode node, int value);
+    TreeNode* removeRecursive(TreeNode node, int value);
+    TreeNode* containsRecursive(TreeNode node, int value);
+    TreeNode* sizeRecursive(TreeNode node);
 };
