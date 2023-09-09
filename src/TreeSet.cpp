@@ -65,7 +65,13 @@ TreeNode* TreeSet::containsRecursive(TreeNode* node, int value) {
 }
 
 int TreeSet::sizeRecursive(TreeNode* node) {
-    return 0;
+    if (node == nullptr) {
+        return 0;
+    }
+
+    int sizeLeft = sizeRecursive(node->getLeft());
+    int sizeRight = sizeRecursive(node->getRight());
+    return (sizeLeft + sizeRight) + 1;
 }
 
 TreeNode* TreeSet::leftRotate(TreeNode* x) {
