@@ -8,7 +8,7 @@ TreeSet::~TreeSet() {
     delete root;
 }
 
-void TreeSet::insert(int value) {
+void TreeSet::add(int value) {
 
 }
 
