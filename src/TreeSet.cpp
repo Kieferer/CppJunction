@@ -65,7 +65,13 @@ bool TreeSet::containsRecursive(TreeNode* node, int value) {
         return false;
     }
 
-    return false;
+    if (value == node->getKey()) {
+        return true;
+    } else if (value < node->getKey()) {
+        return containsRecursive(node->getLeft(), value);
+    } else {
+        return containsRecursive(node->getRight(), value);
+    }
 }
 
 int TreeSet::sizeRecursive(TreeNode* node) {
