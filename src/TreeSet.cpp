@@ -61,6 +61,10 @@ TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
 }
 
 bool TreeSet::containsRecursive(TreeNode* node, int value) {
+    if (node == nullptr){
+        return false;
+    }
+
     return false;
 }
 
