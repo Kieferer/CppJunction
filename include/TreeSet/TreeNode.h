@@ -13,5 +13,5 @@ public:
 
     void setHeight(int height) { this->height = height; }
     void setLeft(TreeNode* left) { this->left = left; }
-    void setRight(TreeNode* right) {this->right = right; }
+    void setRight(TreeNode* right) { this->right = right; }
 };
