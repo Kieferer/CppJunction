@@ -10,8 +10,8 @@ private:
 public:
     int getKey() const { return key; };
     int getHeight() const {return height; };
-    TreeNode getLeft() const { return *left; };
-    TreeNode getRight() const { return *right; };
+    TreeNode* getLeft() const { return left; };
+    TreeNode* getRight() const { return right; };
 
     void setHeight(int height) { this->height = height; }
     void setLeft(TreeNode* left) { this->left = left; }
