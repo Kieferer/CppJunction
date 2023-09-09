@@ -33,6 +33,9 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
         return node;
     }
 
+    node->recalculateHeight();
+    int balance = node->getBalance();
+
     return nullptr;
 }
 
