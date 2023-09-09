@@ -36,6 +36,23 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
     node->recalculateHeight();
     int balance = node->getBalance();
 
+    if (balance > 1) {
+        if (value < node->getLeft()->getKey()){
+            return rightRotate(node);
+        }
+        if (value > node->getLeft()->getKey()){
+            return leftRotate(node->getLeft());
+        }
+    } else if (balance < -1) {
+        if (value > node->getRight()->getKey()) {
+            return leftRotate(node);
+        }
+        if (value < node->getRight()->getKey()) {
+            node->setRight(rightRotate(node->getRight()));
+            return leftRotate(node);
+        }
+    }
+
     return nullptr;
 }
 
