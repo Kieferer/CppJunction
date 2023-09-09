@@ -36,15 +36,15 @@ TreeNode* TreeSet::sizeRecursive(TreeNode* node) {
     return nullptr;
 }
 
-TreeNode *TreeSet::rightRotate(TreeNode *y) {
+TreeNode *TreeSet::rightRotate(TreeNode* y) {
     return nullptr;
 }
 
-TreeNode *TreeSet::leftRotate(TreeNode *x) {
+TreeNode *TreeSet::leftRotate(TreeNode* x) {
     return nullptr;
 }
 
-void TreeSet::destroyTree(TreeNode *node) {
+void TreeSet::destroyTree(TreeNode* node) {
 
 }
 
