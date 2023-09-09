@@ -33,7 +33,7 @@ TreeNode* TreeSet::containsRecursive(TreeNode* node, int value) {
 }
 
 int TreeSet::sizeRecursive(TreeNode* node) {
-    return nullptr;
+    return 0;
 }
 
 TreeNode* TreeSet::leftRotate(TreeNode* x) {
