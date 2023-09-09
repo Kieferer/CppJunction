@@ -6,8 +6,8 @@ private:
     TreeNode *right;
 
 public:
-    int getKey();
-    int getHeight();
-    TreeNode getLeft();
-    TreeNode getRight();
+    int getKey() const { return key; };
+    int getHeight() const {return height; };
+    TreeNode getLeft() const { return *left; };
+    TreeNode getRight() const { return *right; };
 };
