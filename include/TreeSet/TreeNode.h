@@ -8,6 +8,13 @@ private:
     TreeNode* right;
 
 public:
+    TreeNode(int key) {
+        this->key = key;
+        height = 1;
+        left = nullptr;
+        right = nullptr;
+    }
+
     int getKey() const { return key; };
     int getHeight() const {return height; };
     TreeNode* getLeft() const { return left; };
