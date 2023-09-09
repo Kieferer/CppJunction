@@ -21,6 +21,10 @@ int TreeSet::size() {
 }
 
 TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
+    if (node == nullptr){
+        return new TreeNode(value);
+    }
+
     return nullptr;
 }
 
