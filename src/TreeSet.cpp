@@ -71,7 +71,7 @@ int TreeSet::sizeRecursive(TreeNode* node) {
 
     int sizeLeft = sizeRecursive(node->getLeft());
     int sizeRight = sizeRecursive(node->getRight());
-    return 0;
+    return (sizeLeft + sizeRight) + 1;
 }
 
 TreeNode* TreeSet::leftRotate(TreeNode* x) {
