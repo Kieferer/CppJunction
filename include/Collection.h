@@ -1,0 +1,8 @@
+//
+// Created by balaz on 2023. 09. 09..
+//
+
+#ifndef CPPJUNCTION_COLLECTION_H
+#define CPPJUNCTION_COLLECTION_H
+
+#endif //CPPJUNCTION_COLLECTION_H
