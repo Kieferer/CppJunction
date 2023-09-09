@@ -1,8 +1,7 @@
-//
-// Created by balaz on 2023. 09. 09..
-//
-
-#ifndef CPPJUNCTION_COLLECTION_H
-#define CPPJUNCTION_COLLECTION_H
-
-#endif //CPPJUNCTION_COLLECTION_H
+class Collection {
+public:
+    virtual void add(int value);
+    virtual void remove(int value);
+    virtual bool contains();
+    virtual int size();
+};
