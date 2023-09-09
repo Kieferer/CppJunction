@@ -53,7 +53,7 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
         }
     }
 
-    return nullptr;
+    return node;
 }
 
 TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
