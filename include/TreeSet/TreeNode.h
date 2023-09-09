@@ -16,7 +16,7 @@ public:
     }
 
     int getKey() const { return key; };
-    int getHeight() const {return height; };
+    int getHeight() const { return height; };
     TreeNode* getLeft() const { return left; };
     TreeNode* getRight() const { return right; };
 
@@ -28,5 +28,11 @@ public:
         int leftHeight = (left) ? left->getHeight() : 0;
         int rightHeight = (right) ? right->getHeight() : 0;
         height = std::max(leftHeight, rightHeight) + 1;
+    }
+
+    int getBalance() {
+        int leftHeight = (left) ? left->getHeight() : 0;
+        int rightHeight = (right) ? right->getHeight() : 0;
+        return leftHeight - rightHeight;
     }
 };
