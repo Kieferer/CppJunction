@@ -57,7 +57,9 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
 }
 
 TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
-    return nullptr;
+    if (node == nullptr) {
+        return nullptr;
+    }
 }
 
 bool TreeSet::containsRecursive(TreeNode* node, int value) {
