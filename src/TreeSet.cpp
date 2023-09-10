@@ -60,6 +60,30 @@ TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
     if (node == nullptr) {
         return nullptr;
     }
+
+    if (value < node->getKey()) {
+        node->setLeft(removeRecursive(node->getLeft(), value));
+    } else if (value > node->getKey()) {
+        node->setRight(removeRecursive(node->getRight(), value));
+    } else {
+        if (node->getLeft() == nullptr || node->getRight() == nullptr) {
+            TreeNode* temp = (node->getLeft() != nullptr) ? node->getLeft() : node->getRight();
+            if (temp == nullptr) {
+                node = nullptr;
+            } else {
+                *node = *temp;
+                delete temp;
+            }
+        } else {
+            TreeNode* current = node->getRight();
+            while (current->getLeft() != NULL) {
+                current = current->getLeft();
+            }
+            node->setKey(current->getKey());
+
+            node->setRight(removeRecursive(node->getRight(), current->getKey()));
+        }
+    }
 }
 
 bool TreeSet::containsRecursive(TreeNode* node, int value) {
