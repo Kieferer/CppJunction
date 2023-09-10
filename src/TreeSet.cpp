@@ -104,6 +104,8 @@ TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
             return leftRotate(node);
         }
     }
+
+    return node;
 }
 
 bool TreeSet::containsRecursive(TreeNode* node, int value) {
