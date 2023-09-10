@@ -57,7 +57,55 @@ TreeNode* TreeSet::addRecursive(TreeNode* node, int value) {
 }
 
 TreeNode* TreeSet::removeRecursive(TreeNode* node, int value) {
-    return nullptr;
+    if (node == nullptr) {
+        return nullptr;
+    }
+
+    if (value < node->getKey()) {
+        node->setLeft(removeRecursive(node->getLeft(), value));
+    } else if (value > node->getKey()) {
+        node->setRight(removeRecursive(node->getRight(), value));
+    } else {
+        if (node->getLeft() == nullptr || node->getRight() == nullptr) {
+            TreeNode* temp = (node->getLeft() != nullptr) ? node->getLeft() : node->getRight();
+            if (temp == nullptr) {
+                node = nullptr;
+            } else {
+                *node = *temp;
+                delete temp;
+            }
+        } else {
+            TreeNode* current = node->getRight();
+            while (current->getLeft() != NULL) {
+                current = current->getLeft();
+            }
+            node->setKey(current->getKey());
+
+            node->setRight(removeRecursive(node->getRight(), current->getKey()));
+        }
+    }
+
+    node->recalculateHeight();
+    int balance = node->getBalance();
+
+    if (balance > 1) {
+        if (value < node->getLeft()->getKey()) {
+            return rightRotate(node);
+        }
+        if (value > node->getLeft()->getKey()) {
+            return leftRotate(node->getLeft());
+        }
+    } else if (balance < -1) {
+        if (value > node->getRight()->getKey()) {
+            return leftRotate(node);
+        }
+        if (value < node->getRight()->getKey()) {
+            node->setRight(rightRotate(node->getRight()));
+            return leftRotate(node);
+        }
+    }
+
+    return node;
 }
 
 bool TreeSet::containsRecursive(TreeNode* node, int value) {
