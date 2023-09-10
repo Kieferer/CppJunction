@@ -5,11 +5,11 @@ TreeSet::~TreeSet() {
 }
 
 void TreeSet::add(int value) {
-    addRecursive(root, value);
+    root = addRecursive(root, value);
 }
 
 void TreeSet::remove(int value) {
-    removeRecursive(root, value);
+    root = removeRecursive(root, value);
 }
 
 bool TreeSet::contains(int value) {
