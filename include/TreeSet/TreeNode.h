@@ -20,6 +20,7 @@ public:
     TreeNode* getLeft() const { return left; };
     TreeNode* getRight() const { return right; };
 
+    void setKey(int key) { this->key = key; }
     void setLeft(TreeNode* left) { this->left = left; }
     void setRight(TreeNode* right) { this->right = right; }
 
