@@ -1,6 +1,0 @@
-#ifndef CPPJUNCTION_LIBRARY_H
-#define CPPJUNCTION_LIBRARY_H
-
-void hello();
-
-#endif //CPPJUNCTION_LIBRARY_H

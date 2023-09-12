@@ -4,7 +4,6 @@ project(CppJunction)
 set(CMAKE_CXX_STANDARD 17)
 
 set(SOURCE_FILES
-        library.cpp
         src/TreeSet.cpp
 )
 
