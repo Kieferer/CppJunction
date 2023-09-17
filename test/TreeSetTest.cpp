@@ -54,7 +54,22 @@ TEST_F(TreeSetTest, AddRemoveSomeElements) {
         tree->remove(removedElement);
     }
     int numberOfElements = sizeof(testElements) / sizeof(testElements[0]);
-    int numberOfRemovedElements = sizeof(testElements) / sizeof(testElements[0]);
+    int numberOfRemovedElements = sizeof(elementsToBeRemoved) / sizeof(elementsToBeRemoved[0]);
     int assumesSizeOfTree = numberOfElements - numberOfRemovedElements;
     EXPECT_EQ(assumesSizeOfTree, tree->size());
+}
+
+TEST_F(TreeSetTest, ContainsElements) {
+    int testElements[] = {10, 25, 36, 44, 56, 67, 88, 91};
+    int elementsToBeChecked[] = {10, 36, 56, 88};
+    bool isAnyElementMissing = false;
+    for (int element : testElements) {
+        tree->add(element);
+    }
+    for (int checkedElement : elementsToBeChecked) {
+        if (!tree->contains(checkedElement)){
+            isAnyElementMissing = true;
+        }
+    }
+    EXPECT_FALSE(isAnyElementMissing);
 }
