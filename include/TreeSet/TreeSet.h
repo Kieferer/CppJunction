@@ -16,6 +16,7 @@ private:
     TreeNode* addRecursive(TreeNode* node, int value);
     TreeNode* removeRecursive(TreeNode* node, int value);
     bool containsRecursive(TreeNode* node, int value);
+    bool isEmpty();
     int sizeRecursive(TreeNode* node);
 
     TreeNode* rightRotate(TreeNode* y);

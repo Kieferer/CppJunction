@@ -16,6 +16,10 @@ bool TreeSet::contains(int value) {
     return containsRecursive(root, value);
 }
 
+bool TreeSet::isEmpty() {
+    return size() == 0;
+}
+
 int TreeSet::size() {
     return sizeRecursive(root);
 }
