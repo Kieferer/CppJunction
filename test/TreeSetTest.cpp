@@ -36,3 +36,10 @@ TEST_F(TreeSetTest, AddMultipleElement) {
     int numberOfElements = sizeof(testElements) / sizeof(testElements[0]);
     EXPECT_EQ(numberOfElements, tree->size());
 }
+
+TEST_F(TreeSetTest, AddRemoveSingleElement) {
+    int testElement = 10;
+    tree->add(testElement);
+    tree->remove(testElement);
+    EXPECT_TRUE(tree->isEmpty());
+}
