@@ -21,3 +21,9 @@ protected:
 TEST_F(TreeSetTest, IsTreeEmpty) {
     EXPECT_TRUE(tree->isEmpty());
 }
+
+TEST_F(TreeSetTest, AddSingleElement) {
+    int testElement = 10;
+    tree->add(testElement);
+    EXPECT_FALSE(tree->isEmpty());
+}
