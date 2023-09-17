@@ -27,3 +27,12 @@ TEST_F(TreeSetTest, AddSingleElement) {
     tree->add(testElement);
     EXPECT_FALSE(tree->isEmpty());
 }
+
+TEST_F(TreeSetTest, AddMultipleElement) {
+    int testElements[] = {10, 25, 36, 44, 56, 67, 88, 91};
+    for (int element : testElements) {
+        tree->add(element);
+    }
+    int numberOfElements = sizeof(testElements) / sizeof(testElements[0]);
+    EXPECT_EQ(numberOfElements, tree->size());
+}
