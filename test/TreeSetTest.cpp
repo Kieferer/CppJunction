@@ -17,3 +17,7 @@ protected:
         delete tree;
     }
 };
+
+TEST_F(TreeSetTest, IsTreeEmpty) {
+    EXPECT_TRUE(tree->isEmpty());
+}
