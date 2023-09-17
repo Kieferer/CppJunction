@@ -43,3 +43,18 @@ TEST_F(TreeSetTest, AddRemoveSingleElement) {
     tree->remove(testElement);
     EXPECT_TRUE(tree->isEmpty());
 }
+
+TEST_F(TreeSetTest, AddRemoveSomeElements) {
+    int testElements[] = {10, 25, 36, 44, 56, 67, 88, 91};
+    int elementsToBeRemoved[] = {10, 36, 56, 88};
+    for (int element : testElements) {
+        tree->add(element);
+    }
+    for (int removedElement : elementsToBeRemoved) {
+        tree->remove(removedElement);
+    }
+    int numberOfElements = sizeof(testElements) / sizeof(testElements[0]);
+    int numberOfRemovedElements = sizeof(testElements) / sizeof(testElements[0]);
+    int assumesSizeOfTree = numberOfElements - numberOfRemovedElements;
+    EXPECT_EQ(assumesSizeOfTree, tree->size());
+}
