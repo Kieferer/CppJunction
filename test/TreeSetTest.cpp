@@ -38,9 +38,11 @@ TEST_F(TreeSetTest, AddMultipleElement) {
 }
 
 /*
-    These tests throw segmentation errors
+    These tests throw segmentation errors, to test it with GDB you have to build the test with g++ with the following command:
+    "g++ -g -o Tests -I./include ./src/TreeSet.cpp ./test/TreeSetTest.cpp -lgtest -lgtest_main"
+    GTest should be installed on the system.
 
-    TEST_F(TreeSetTest, AddRemoveSingleElement) {
+TEST_F(TreeSetTest, AddRemoveSingleElement) {
     int testElement = 10;
     tree->add(testElement);
     tree->remove(testElement);
